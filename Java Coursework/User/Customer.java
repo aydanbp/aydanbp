@@ -1,5 +1,6 @@
 package User;
-public class Customer {
+
+public class Customer implements User{
     private String name;
     private String DoB;
     private int pNum;
@@ -16,6 +17,17 @@ public void display(){
     System.out.println("Customer's Name" + name + "\n"
     +"Customer's Date of birth"+DoB
     );
+}
+
+@Override
+public void avRooms() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'avRooms'");
+}
+
+@Override
+public boolean admCk() {
+    return false;
 }
     
 

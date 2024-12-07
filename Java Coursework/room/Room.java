@@ -3,17 +3,23 @@ package room;
 public abstract class Room {
     private String RmNo;
     private int floor;
-    private String Ocu;
-    private String Desc;
+    private int Ocu; //Occupancy
+    public String[] Arr;
+    
+    
 
-    private void Room(String RmNo, int floor){
-        this.RmNo=RmNo;
+    public Room(String RmNo, int floor, int Ocu){
         this.floor=floor;
-    }
-    public String Num(){
-        return RmNo;
+        this.Ocu=Ocu;
+        this.RmNo=RmNo;
     }
 
-    public abstract double Price();// Used un other classes to calculate price
-    public abstract void display();//Display text
+    
+    public abstract double price(); //Price of individual room
+    public abstract void Desc();    //General Description of a room type
+    public abstract void display(); // Contains details relating to that specific room
+
+
+    //public abstract void doot();  //General test variable
+
 }

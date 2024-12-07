@@ -32,7 +32,7 @@ public class FileReadWrite {
             }
             sc.close(); 
         }
-            //Split method
+            //Split method - Splits CSV into arrays then displays information
         public void FileReadS() throws IOException{
             String FlNm = ".csv";
             FileReader reader = new FileReader(FlNm);

@@ -1,19 +1,12 @@
 package User;
 // Was meant to be used as a superclass for admin & Customer. Very little overlap. Most likely be unused
-public class User {
-    private String name;
+public interface User {
 
-    public User(String N) { //Used for the Customer
-    name = N;
-        
-    }
-    public Boolean User(String N, String pw){ //used for admin
-        name = N;
-        return true;
+    boolean admCk();  //Used for the Customer
+    
 
-    }
-    public void avRooms(){ // List all Avalible rooms 
+    void avRooms(); // List all Avalible rooms 
 
-    }
+    
     
 }
