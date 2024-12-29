@@ -28,7 +28,36 @@ public class SuiteRoom extends Room {
 
     @Override
     public void display() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'display'");
+        if (!Kitchenette){
+            System.out.println("Room Number\t"+ getRoomNo() +"\t On Floor "+getfloor()+
+            "\nFor "+getOcup()+" People\n"+"The living area is\t"+LvnArea+"^2 m\t"+"There are "+bthrm+" bathrooms"+
+            "\nThe total price is\t"+price());
+        }
+        else{
+            System.out.println("Room Number\t"+ getRoomNo() +"\t On Floor "+getfloor()+
+            "\tFor "+getOcup()+" People\n"+"The living area is\t"+LvnArea+"^2 m\t"+"There are "+bthrm+" bathrooms"+
+            "\nAdditionally you have a 1x1m kitchenette"+
+            "\nThe total price is\t"+price());
+        }
+    }
+
+    @Override
+    public String info() {
+        if (!Kitchenette){
+           return "Room Number\t"+ getRoomNo() +"\t On Floor "+getfloor()+
+            "\nFor "+getOcup()+" People\n"+"The living area is\t"+LvnArea+"^2 m\t"+"There are "+bthrm+" bathrooms"+
+            "\nThe total price is\t"+price();
+        }
+        else{
+            return "Room Number\t"+ getRoomNo() +"\t On Floor "+getfloor()+
+            "\tFor "+getOcup()+" People\n"+"The living area is\t"+LvnArea+"^2 m\t"+"There are "+bthrm+" bathrooms"+
+            "\nAdditionally you have a 1x1m kitchenette"+
+            "\nThe total price is\t"+price();
+        }
+    }
+
+    @Override
+    public String type() {
+        return "suite";
     }
 }

@@ -1,26 +1,24 @@
 package room;
 
 public class Standard extends Room {
-    private final int Windows;
-    private String[] Arr;
+    private int Windows;
 
     public Standard(String RmNo, int floor, int Ocu ,int Windows) {
         super(RmNo, floor, Ocu);
         this.Windows=Windows;
-        Arr[0] = RmNo;
-        Arr[1] = Integer.toString(floor);
-        Arr[2] = Integer.toString(Ocu);
+        
     }
 
     @Override
     public void display() {
-        System.out.println("Room Number\t"+ Arr[0] +"\t On Floor "+Arr[1]+
-        "For Ocu People\n"+"Number of windows: "+Windows);
+        System.out.println("Room Number\t"+ getRoomNo() +"\t On Floor "+getfloor()+
+        "\nFor "+getOcup()+" People.\t"+"Number of windows: "+Windows+
+        "\nTotal Price:\t£"+price());
     }
 
     @Override
     public double price() {
-        return 100*(Windows*0.1);
+        return 100+(Windows*10);
     }
 
     @Override
@@ -28,7 +26,19 @@ public class Standard extends Room {
        System.out.println("Damp, Moldy walls and atleast 1 window the size of a hampster. We should be paying you to stay here");
     }
 
+    @Override
+    public String info() {
+        return "Room Number\t"+ getRoomNo() +"\t On Floor "+getfloor()+
+        "\nFor "+getOcup()+" People.\t"+"Number of windows: "+Windows+
+        "\nTotal Price:\t£"+price();
+    }
 
+    @Override
+    public String type() {
+        return "standard";
+    }
+
+    
 
    
     

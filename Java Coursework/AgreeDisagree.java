@@ -1,6 +1,4 @@
-package User;
-
-public abstract class User {
+public class AgreeDisagree {
     public static boolean AgreeDisagree(String Inp) {
         if (Inp.toLowerCase().contains("yes")){
             return true;
@@ -10,4 +8,8 @@ public abstract class User {
         }
         
     }
+    public static void Q() {
+        System.out.println("Is this ok?\t>>>");
+    }
+    
 }

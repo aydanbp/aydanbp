@@ -8,14 +8,12 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class FileReadWrite {
-
         public void FileWrite() throws IOException{
         //This part retrieves the local date and uses it as the CSV name
-        DateTimeFormatter fmtObj = DateTimeFormatter.ofPattern("ddMMyy");
+        DateTimeFormatter fmtObj = DateTimeFormatter.ofPattern("ddMMyy"); //Declaring what format I want the date in (ddMMyy, mmssHH)
         LocalDate rawDt = LocalDate.now();
         String fmtDt = rawDt.format(fmtObj);
         System.out.println(fmtDt);
-
         String Filename = fmtDt+".csv";
         FileWriter writer = new FileWriter(Filename);
         writer.append("RoomNo.,Name,Phone Number \n");
